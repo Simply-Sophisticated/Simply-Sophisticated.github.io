@@ -1,0 +1,38 @@
+---
+
+---
+<div class="snippet">
+    <div>
+        <slot name="snip1" />
+    </div>
+    <div>
+       <slot name="snip2" />
+    </div>
+</div>
+
+<style>
+    .snippet{
+		grid-column: 1/13;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+		background-color: rgba(196, 196, 196, 0.15);
+		padding: 40px 10px;
+		color: #252525;
+		align-items: center;
+        justify-content: space-between;
+	}
+	.snippet div:first-child{
+		grid-column: 3/7;
+		border-right: 4px solid #E2E2E2;
+		line-height: 2.67em;
+		margin: 20px 0;
+	}
+	.snippet div:last-child{
+		grid-column: 7/11;
+		margin: 0 0 0 70px;
+		color: rgba(0, 0, 0, 0.5);
+		height: auto;
+        padding: 20px 0;
+	}
+</style>

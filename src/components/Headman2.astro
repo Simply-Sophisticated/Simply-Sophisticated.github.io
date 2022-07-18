@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon';
+---
+<!-- Header Definition -->
+<header>
+    <div id="content">
+        <div id="overlay">
+            <div class="duce">
+                <slot name="intro"/>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Styles -->
+<style>
+    header {
+        display: grid;
+        grid-column: 1/13;
+        grid-template-columns: repeat(12, 1fr);
+        min-height: 30vh;
+    }
+    #content{
+		grid-column: 1/13;
+		background-image: url("../bg_main2.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+    #overlay{
+		background-color: rgba(32, 74, 113, 0.89);
+		height: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-content: center;
+        align-items: center;
+	}
+    .duce{
+		grid-column: 3/11;
+		padding: 0;
+		margin: 0;
+	}
+    .duce h2{
+        max-width: 34vw;
+        font-size: 4.7em;
+    }
+    .duce p{
+        max-width: 34vw;
+        line-height: 1.67em;
+    }
+</style>

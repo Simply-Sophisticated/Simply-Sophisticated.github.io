@@ -1,0 +1,44 @@
+---
+import BaseBluprint from '../layouts/BaseBluprint.astro';
+import Headman2 from '../components/Headman2.astro';
+import Button from '../components/Button.astro';
+const title="404 Not Found";
+---
+<BaseBluprint title="404 Not Found">
+    <Headman2>
+        <div class="duce" slot="intro">
+
+        </div>
+    </Headman2>
+    <div class="error">
+        <img id="errorImg" src="../error_404.svg" />
+        <h1>Oops!</h1>
+        <p>We can't seem to find the page you are looking for.</p>
+        <Button btnLabel="Back to Homepage" className="btnBlue" onclickLink="location.href='index.html'"></Button>
+    </div>
+</BaseBluprint>
+<style>
+    .duce h2{
+        max-width: 34vw;
+        font-size: 2.7em;
+    }
+    .duce p{
+        max-width: 34vw;
+        line-height: 1.67em;
+    }
+    .error{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: auto;
+        padding: 100px 0;
+        justify-content: center;
+        text-align: center;
+    }
+    h1{
+        color: #252525;
+        margin-bottom: 10px;
+    }
+    p{
+        color: rgba(0, 0, 0, 0.5);
+    }
+</style>

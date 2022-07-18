@@ -1,0 +1,164 @@
+---
+import BaseBluprint from '../layouts/BaseBluprint.astro';
+import Headman2 from '../components/Headman2.astro';
+import {Icon} from 'astro-icon';
+import Button from '../components/Button.astro';
+---
+<BaseBluprint title="Contact">
+    <Headman2>
+        <div class="duce" slot="intro">
+			<h2>Contact</h2>
+		</div>
+    </Headman2>
+
+    <div class="containMe">
+        <h2>Contact Us</h2>
+        <p id="formFill">Contact us by sending an email or fill up the form below.</p>
+
+        <div id="contact_plate">
+            <div id="blue_ctn">
+                <h3>Contact Information</h3>
+                <p id="fiwMi">Fill up the form and our Team will get back to you at the earliest.</p>
+                <div class="man">
+                    <Icon name="ic_ph" width="25" class="contact_con" />
+                    <p class="deets">+260 53 549400</p>
+                </div>
+                <div class="man">
+                    <Icon name="ic_em" width="25" class="contact_con" />
+                    <p class="deets">info@mumunienergy.com</p>
+                </div>
+                <div class="man">
+                    <Icon name="ic_ws" width="25" class="contact_con" />
+                    <p class="deets">https://mumunienergy.com</p>
+                </div>
+                <div class="man">
+                    <Icon name="ic_hq" width="25" class="contact_con" />
+                    <p class="deets">6000-1 Chitemene Rd <br />Northmead, Lusaka.</p>
+                </div>
+            </div>
+            <div>
+                <div class="input_field">
+                    <div class="same">
+                        <h4 class="label">First Name</h4>
+                        <input type="text" label="First Name" placeholder="Enter your first name" class="input_box"/>
+                    </div>
+                    <div class="same">
+                        <h4 class="label">Last Name</h4>
+                        <input type="text" label="Last Name" placeholder="Enter your last name" class="input_box"/>
+                    </div>
+                    <div class="same">
+                        <h4 class="label">Mail</h4>
+                        <input type="text" label="Mail" placeholder="Enter your email" class="input_box"/>
+                    </div>
+                    <div class="same">
+                        <h4 class="label">Phone</h4>
+                        <input type="text" label="Phone" placeholder="Enter your phone" class="input_box"/>
+                    </div>
+                </div>
+                <div>
+                    <div id="msg_ctn">
+                        <h4 class="label">Message</h4>
+                        <textarea type="text" label="Phone" placeholder="Write your message here..." id="msg_box"></textarea>
+                    </div>
+                </div>
+                <Button btnLabel="Send Message" className="btnBlue"/>
+            </div>
+        </div>
+    </div>
+</BaseBluprint>
+
+<style>
+    .duce h2{
+        max-width: 34vw;
+        font-size: 1.6em;
+    }
+    .containMe{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: auto;
+        margin: 50px 0;
+        justify-content: center;
+        text-align: center;
+    }
+    .containMe h2{
+        font-size: 2em;
+    }
+    .containMe h2, #formFill{
+        color: #252525;
+        margin: 10px 0;
+    }
+    #contact_plate{
+        display: grid;
+        grid-template-columns: 39.3% 59.6%;
+        grid-auto-rows: auto auto auto;
+        gap: 15px;
+    }
+    #blue_ctn{
+        font-size: .9em;
+        padding: 40px 50px;
+        text-align: left;
+        color: #fff; 
+        /*background-image: url("../icons/bg_contact.svg");
+        background-repeat: no-repeat;*/
+        border-radius: 20px;
+        background-color: #2D9CDB;
+    }
+    .deets{
+        margin: 10px 0;
+    }
+    .man{
+        display: flex;
+        gap: 0 10px;
+    }
+    #fiwMi{
+        color: rgba(255, 255, 255, 0.6);
+        padding: 0;
+        margin: 7px 0 20px 0;
+    }
+    #blue_ctn h3{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .input_box{
+        padding: 10px 20px;
+        border: 1px solid #A0A4A8;
+        border-radius: 8px;
+        display: block;
+        width: 80%;
+    }
+    .input_field{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        gap: 15px;
+    }
+    .input_field h4, #msg_ctn h4{
+        color: #252525;
+        padding: 0;
+        margin: 7px;
+    }
+    .same{
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: auto auto;
+        justify-items: start;
+    }
+    .label{
+        display: inline-block;
+    }
+    #msg_box{
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #A0A4A8;
+        height: 300px;
+    }
+    #msg_ctn{
+        text-align: left;
+        width: 100%;
+    }
+    #formFill{
+        margin-bottom: 40px;
+    }
+</style>

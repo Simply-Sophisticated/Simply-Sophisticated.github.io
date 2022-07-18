@@ -1,0 +1,180 @@
+---
+import BaseBluprint from '../layouts/BaseBluprint.astro';
+import Headman2 from '../components/Headman2.astro';
+import Snippet from '../components/Snippet.astro';
+import Button from '../components/Button.astro';
+
+---
+<BaseBluprint title="Team">
+    <Headman2>
+        <div class="duce" slot="intro">
+			<h2>Team</h2>
+		</div>
+    </Headman2>
+
+    <Snippet>
+        <div class="snip" slot="snip1" id="innerSnip">
+			<h3>We’re sustainable energy project developers</h3>
+		</div>
+		<div class="snip" slot="snip2">
+			<p>Mumuni Energy Corporation Limited is a Zambian registered, citizen owned business entity that has been setup to serve as a holding company for the development of sustainable power projects. Over the short to medium term, Mumuni’s main focus is the development of utility scale PV solar projects in Zambia and DRC.</p>
+		</div>
+    </Snippet>
+
+    <div class="teamsheet">
+        <h3>Our Leadership Team</h3>
+        <p>Our core values are excellence, integrity, innovation, diligence, accountability and partnership.</p>
+        <div id="catalogue_team">
+            <div>
+                <img src="img_pro1.svg" class="circle_profile" />
+                <h5 class="profile_name">James Mufugi</h5>
+                <p class="profile_position">Director & Co-founder</p>
+            </div>
+            <div>
+                <img src="img_pro2.svg" class="circle_profile" />
+                <h5 class="profile_name">Kaluba Chilaisha</h5>
+                <p class="profile_position">Director & Co-founder</p>
+            </div> 
+            <div>
+                <img src="img_pro3.svg" class="circle_profile" />
+                <h5 class="profile_name">Moose Musonda</h5>
+                <p class="profile_position">Co-founder</p>
+            </div> 
+            <div>
+                <img src="img_pro4.svg" class="circle_profile" />
+                <h5 class="profile_name">Charles Mwamba</h5>
+                <p class="profile_position">Co-founder</p>
+            </div> 
+            <div>
+                <img src="img_pro5.svg" class="circle_profile" />
+                <h5 class="profile_name">Edgar Siakacoma</h5>
+                <p class="profile_position">Assoc. Director</p>
+            </div> 
+            <div>
+                <img src="img_pro6.svg" class="circle_profile" />
+                <h5 class="profile_name">Alex Kangwa</h5>
+                <p class="profile_position">Co-founder</p>
+            </div> 
+            <div>
+                <img src="img_pro7.svg" class="circle_profile" />
+                <h5 class="profile_name">Kelly Kalimukwa</h5>
+                <p class="profile_position">Assoc. Director</p>
+            </div>     
+        </div>
+    </div>
+
+    <Snippet>
+        <div class="snip" slot="snip1" id="innerSnip">
+			<h2>Join a team of project development partners</h2>
+            <p id="kontact">Developing sustainable power generation in Zambia, DRC and Southern Africa regiaon, in partnership with financing and EPC partners.</p>
+            <Button className="btnBlue" btnLabel="Contact Us" />
+		</div>
+		<div class="snip" slot="snip2">
+			<img src="../img_poles.svg" class="cardImg">
+		</div>
+    </Snippet>
+
+    <div class="infoCard3">
+		<h2>See Our Current Projects</h2>
+		<p>Chililabombwe 100 MW Solar Power Project</p>
+		<div id="imgGallery">
+			<img src="gal1.png" class="theseImgs" />
+			<img src="gal2.png" class="theseImgs" />
+			<img src="gal3.png" class="theseImgs" />
+		</div>
+		<Button className="btnBlue" btnLabel="Go to Current Project" />
+	</div>
+</BaseBluprint>
+
+<style>
+    .duce h2{
+        max-width: 34vw;
+        font-size: 1.6em;
+    }
+    .snip h3{
+		font-size: 2em;
+	}
+	.snip p{
+		margin: 0;
+		line-height: 1.67em;
+	}
+    #innerSnip{
+        padding-right: 30px;
+    }
+    .teamsheet{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 0;
+    }
+    .teamsheet h3{
+        color: #252525;
+        font-size: 1.67em;
+    }
+    .teamsheet p{
+        color: rgba(0,0,0,0.5);
+    }
+    #catalogue_team{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    .circle_profile{
+        width: 100px;
+        height: auto;
+    }
+    #catalogue_team h5{
+        font-size: 1em;
+
+        margin: 7px 0;
+        color: #252525;
+    }
+    #catalogue_team p{
+        margin-top: 5px;
+        font-size: .9em;
+    }
+    #kontact{
+        margin-bottom: 20px;
+    }
+    .infoCard3{
+		grid-column: 3/11;
+		display: grid;
+		grid-template-columns: auto;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		color: #252525;
+		margin: 40px auto;
+	}
+	#imgGallery{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-gap: 10px;
+		margin: 20px 10px;
+	}
+	.theseImgs{
+		border-radius: 20px;
+		background-color: #e5e5e5;
+		padding: 0;
+		width: 100%;
+		height: auto;
+	}
+	.theseImgs:first-of-type{
+	    padding: 0;
+	}
+	.infoCard3 p{
+		color: rgba(0, 0, 0, 0.5);
+		padding: 10px;
+	}
+	.infoCard3 h2{
+		margin: 0;
+	}
+    .cardImg{
+        width: 100%;
+        height: auto;
+    }
+</style>

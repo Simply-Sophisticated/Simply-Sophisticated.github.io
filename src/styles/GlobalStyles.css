@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "main";
+    src: url("../Roboto-Regular.ttf");
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#mainLogo {
+    display: block;
+}
+body {
+    font-family: "main";
+    color: #E5E5E5;
+}

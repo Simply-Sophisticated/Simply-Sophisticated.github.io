@@ -1,0 +1,44 @@
+---
+const {btnLabel = "Contact Us", class="btnBlue"} = Astro.props;
+const {className ="btnDefault"} = Astro.props;
+const {onclickLink ="#"} = Astro.props; 
+---
+<button class={className} onclick={onclickLink}>
+    {btnLabel}
+</button>
+
+<!-- Button Styling-->
+<style>
+    .btnDefault{
+        grid-column: 2;
+        width: 200px;
+        height: 50px;
+        background-color: #ED994C;
+        text-align: center;
+        border-radius: 50px;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        font-size: 1.05em;
+        cursor: pointer;
+    }
+    .btnBlue{
+        background-color: #2D9CDB;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50px;
+        color: #ffffff;
+        text-decoration: none;
+        border: none;
+        font-size: 1.05em;
+        cursor: pointer;
+        margin: auto;
+    }
+    .btnDefault:hover{
+        background-color: #D07624;
+    }
+    .btnBlue:hover{
+        background-color: #204A71;
+    }
+</style>

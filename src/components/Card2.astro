@@ -1,0 +1,29 @@
+---
+
+---
+<div class="card" id="boulder">
+    <div class="c1">
+        <slot name="desc"/>
+    </div>
+    <div class="c2">
+        <slot name="img"/>
+    </div>  
+</div>
+
+<style>
+    .card{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: 45% 55%;
+        padding: 100px 0;
+        gap: 70px;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .c2{
+        padding: 20px;
+    }
+    #boulder{
+		border-top: 4px solid #c4c4c4;
+	}
+</style>

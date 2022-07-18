@@ -1,0 +1,29 @@
+---
+
+---
+<div class="card">
+    <div class="c1">
+        <slot name="img"/>
+    </div>
+    <div class="c2">
+        <slot name="desc"/>
+    </div>  
+</div>
+
+<style>
+    .card{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: 45% 55%;
+        margin: 100px 0;
+        gap: 70px;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .c2{
+        padding: 20px;
+    }
+    .c2 p{
+
+    }
+</style>

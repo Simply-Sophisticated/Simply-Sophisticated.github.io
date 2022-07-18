@@ -1,0 +1,59 @@
+---
+import { Icon } from 'astro-icon';
+---
+<div class="cont">
+    <div class="nav_wrapper">
+        <div>
+            <Icon name='mumuniLogo' width={125} id="mainLogo" />
+        </div>
+        <nav>
+            <ul>
+                <a href="about.html"><li>About</li></a>
+                <a href="goals.html"><li>Goals</li></a>
+                <a href="project.html"><li>Project</li></a>
+                <a href="team.html"><li>Team</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <div class="moreNav">
+            <ul>
+                <a href="#"><li><Icon name='icon_search' width={25}/></li></a>
+                <a href="#"><li><Icon name='icon_bag' width={25}/></li></a>
+                <a href="#"><li><Icon name='icon_profile' width={25}/></li></a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .cont{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .nav_wrapper{
+        grid-column: 3/11;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6px 15px 6px 0;
+        align-items: center;
+    }
+    ul {
+        list-style-type: none;
+    }
+    li {
+        display: inline-block;
+        padding: 12px 15px;
+    }
+    a {
+        width: auto;
+        color: #fff;
+    }
+    nav li:hover{
+        text-decoration: underline;
+    }
+</style>

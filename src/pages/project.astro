@@ -1,0 +1,132 @@
+---
+import BaseBluprint from "../layouts/BaseBluprint.astro";
+import Navbar from "../components/Navbar.astro";
+import Headman2 from "../components/Headman2.astro";
+import Card from "../components/Card.astro";
+import Card2 from "../components/Card2.astro";
+import {Icon} from 'astro-icon';
+---
+<BaseBluprint title="Project">
+    <Navbar />
+    <Headman2>
+        <div class="duce" slot="intro">
+			<h2>100MW Chililabombwe PV Solar Project</h2>
+		</div>
+    </Headman2>
+    <Card2>
+        <div slot="desc" class="description" id="disc">
+			<h3>Chililabombwe 100MW PV Solar plant will supply mines in North-western & copperbelt provinces, and the DRC.</h3>
+			<div class="genList">
+                <h5>Locations:</h5>
+                <p>Approximately 16km from Chililabombwe, Copperbelt province, Zambia.  Site ooordinates at 12.43˚S, 27.95˚E.
+    150Ha has been set aside for the project.</p>
+            </div>
+            <div class="genList">
+                <h5>Current Phase:</h5>
+                <p>Pre-planning/Planning</p>
+            </div>
+            <div class="genList">
+                <h5>Grid Connection: </h5>
+                <p>CEC 220kV Grid within 2km of project site.</p>
+            </div>
+            <div class="genList">
+                <h5>Funding</h5>
+                <p>Mix of debt & equity financing from investment partners.</p>
+            </div>
+            <div class="genList">
+                <h5>Target Market:</h5>
+                <ul>
+                    <li>Mines in C/belt &  north-western provinces, & DRC</li>
+                    <li>Manufacturing  industries</li>
+                    <li>Southern African Power Pool (SAPP)</li>
+                </ul>
+            </div>
+            <div class="genList">
+                <h5>Offtakers:</h5>
+                <p>Major utilities / large mines</p>
+            </div>
+		</div>
+		<div slot="img" class="img_space">
+			<img src="img_wahda.svg" class="cardImg"/>
+		</div>
+    </Card2>
+
+    <div class="nugget">
+        <h3>Project Implementation</h3>
+        <p>Our short term goal is successful implementation of Chililabombwe Solar PV Project across all its phases - from Planning, to Engineering, Construction, to Operation over the life of the plant. 
+        </p>
+    </div>
+
+    <img src="img_chart.svg" class="cardImg" id="chart"/>
+
+    <Card>
+		<div class="description" slot="desc" id="disc2">
+			<h3>Powering Industry...</h3>
+			<p>Over and above the Chililabombwe Solar PV Project, Mumuni seeks to develop other similar utility scale projects in the country to address the huge power deficit currently obtaining in Zambia and in the Southern Africa region. The mines in the Copperbelt region of Zambia and DRC have a huge demand for power and therefore present a ready market, in addition to increasing household demand in both countries that remains unmet. In the medium term, Mumuni shall pursue opportunities in the wider Southern African region.
+</p>
+		</div>
+		<div class="img_space" slot="img">
+			<img src="img_plant.svg" class="cardImg" />
+		</div>
+	</Card>
+</BaseBluprint>
+
+<style>
+    .duce h2{
+        max-width: 34vw;
+        font-size: 1.6em;
+    }
+    .duce p{
+        max-width: 34vw;
+        line-height: 1.67em;
+    }
+    h5{
+        font-size: 1.1em;
+        margin-bottom: 3px;
+    }
+    #disc{
+        background-color: rgba(196, 196, 196, 0.15);
+        padding: 80px;
+
+    }
+    #disc p{
+        line-height: 1.34em;
+        margin-top: 5px;
+    }
+    h3{
+        color: #252525;
+    }
+    .nugget{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        gap:30px;
+        background-color: #305B8D;
+        padding: 70px;
+        border-radius: 20px;
+    }
+    .nugget h3{
+        color: #eee;
+        font-size: 1.8em;
+    }
+    .nugget p:last-child{
+        padding: 0 0 0 30px;
+        border-left: 4px solid #D07624;
+        line-height: 1.67em;
+    }
+    .cardImg{
+		width: 100%;
+		height: auto;
+	}
+    #chart{
+        grid-column: 3/11;
+        padding: 70px 0;
+    }
+    #disc2{
+        line-height: 1.67em;
+    }
+    #disc2 h3{
+        font-size: 1.8em;
+    }
+</style>

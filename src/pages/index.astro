@@ -1,0 +1,223 @@
+---
+import BaseBluprint from '../layouts/BaseBluprint.astro';
+import Headman from '../components/Headman.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import Card2 from '../components/Card2.astro';
+import Snippet from '../components/Snippet.astro';
+import { Icon } from 'astro-icon';
+const title = "Homepage";
+---
+<BaseBluprint title="Homepage">
+	<Headman>
+		<div class="duce" slot="intro">
+			<h2>Powering Industry...</h2>
+			<p>Developing sustainable power generation in Zambia, DRC and the Southern Africa region, in partnership with financing and EPC partners.</p>
+			<br />
+			<Button btnLabel="CONTACT US"/>
+		</div>
+	</Headman>
+	<Card>
+		<div class="img_space" slot="img">
+			<img src="../solarPanels.png" class="cardImg">
+		</div>
+
+		<div class="description" slot="desc">
+			<h3>About Us</h3>
+			<p>We are a power developer in Southern Africa. Our key focus is PV solar power generation.</p>
+			<p>Mumuni Energy Corporation Limited is a Zambian registered, citizen owned business entity that has been setup to serve as a holding company for the development of sustainable power projects. Over the short to medium term, Mumuni’s main focus is the development of utility scale PV solar projects in Zambia and DRC.</p>
+			<div class="moreInfo">
+				<Icon name="icon_mission" class="mumuniIcons" />
+				<div>
+					<h4>Mission</h4>
+					<p>Our mission is to provide reliable and cost-effective power to drive economic growth in Zambia and in the Southern African region. We aim to be the engine for growth in mining, manufacturing & agriculture sectors, and for social economic development in the region.</p>
+				</div>
+			</div>
+			<div class="moreInfo">
+				<Icon name="icon_vision" class="mumuniIcons" />
+				<div>
+					<h4>Vision</h4>
+					<p>Our Vision is to be a leading player in the renewable & mainstream energy sector in the Zambia and in Southern Africa region. We aspire to be the Power Producer of choice for Bulk Power Off-takers in Zambia and in the region, providing reliable power at competitive rates.</p>
+				</div>
+			</div>
+			<div class="moreInfo">
+				<Icon name="icon_values" class="mumuniIcons" />
+				<div>
+					<h4>Values</h4>
+					<p>Our core values are excellence, integrity, innovation, diligence, accountability and partnership.</p>
+				</div>
+			</div>
+		</div>
+	</Card>
+	<Snippet>
+		<div class="snip" slot="snip1">
+			<h3>Contributing to economic development through <span id="emphasis">sustainable energy solutions</span></h3>
+		</div>
+		<div class="snip" slot="snip2">
+			<p>Mumuni is participating in developing PV Solar plants in the country, in support of the nation’s energy generation development objectives. Our immediate objective is to complete development of the Chililabombwe 100MW PV  Solar Power Project, to meet pressing demand on the mines in Zambia and DRC.</p>
+		</div>
+	</Snippet>
+	<Card>
+		<div class="description" slot="desc">
+			<h3>Developer of Sustainable Power Generation</h3>
+			<p>Developing sustainable power generation in Zambia, DRC and Southern Africa region, in partnership with financing and EPC partners.</p>
+			<Button className="btnBlue"/>
+		</div>
+		<div class="img_space" slot="img">
+			<img src="img2.png" class="cardImg" />
+		</div>
+	</Card>
+	<Card2>
+		<div slot="desc" class="description">
+			<h3>Our Goals</h3>
+			<p>Below are our key short to medium term goals and objectives:</p>
+			<div id="objectivesCtn">
+				<div class="objectivesItem">
+					<Icon name="icon_01" class="numberIcons" />
+					<h4>Chililabombwe PV Solar Plant</h4>
+					<p>Complete development of the Chililabombwe 100MW PV  Solar Power Project</p>
+				</div>
+				<div class="objectivesItem">
+					<Icon name="icon_02" class="numberIcons" />
+					<h4>Country-wide Solar Projects</h4>
+					<p>Develop PV Solar Plants in at least two other regions in the country</p>
+				</div>
+				<div class="objectivesItem">
+					<Icon name="icon_03" class="numberIcons" />
+					<h4>Regional Expansion</h4>
+					<p>Undertake joint venture projects for power generation in other countries within the Southern African region.</p>
+				</div>
+				<div class="objectivesItem">
+					<Icon name="icon_04" class="numberIcons" />
+					<h4>Nuclear Power Projects</h4>
+					<p>Exploit SMR nuclear power to meet the country’s long term requirement for base load generation.</p>
+				</div>
+				<div class="objectivesItem" >
+					<Icon name="icon_05" class="numberIcons" />
+					<h4>Coal Thermal Projects</h4>
+					<p>Harness unrealised coal reserve. Seek partners with the start-of-the-art eco-friendly technologies to harness this resource.</p>
+				</div>
+				<div class="objectivesItem">
+					<Icon name="icon_06" class="numberIcons" />
+					<h4>Other Sustainable Projects</h4>
+					<p>Explore other innovative renewable sources and seek partners to develop projects.</p>
+				</div>
+			</div>
+		</div>
+		<div slot="img" class="img_space">
+			<img src="img3.png" class="cardImg"/>
+		</div>
+	</Card2>
+
+	<div class="infoCard3">
+		<h2>See Our Current Projects</h2>
+		<p>Chililabombwe 100 MW Solar Power Project</p>
+		<div id="imgGallery">
+			<img src="gal1.png" class="theseImgs" />
+			<img src="gal2.png" class="theseImgs" />
+			<img src="gal3.png" class="theseImgs" />
+		</div>
+		<Button className="btnBlue" btnLabel="Go to Current Project" />
+	</div>
+</BaseBluprint>
+
+<style>
+	.duce h2{
+        max-width: 34vw;
+        font-size: 2.7em;
+    }
+    .duce p{
+        max-width: 34vw;
+        line-height: 1.67em;
+    }
+	.mumuniIcons{
+		width: 60px;
+		height: auto;
+	}
+	.moreInfo{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto;
+		grid-gap: 20px;
+		margin-bottom: 20px;
+	}
+	.moreInfo:first-of-type{
+		margin-top: 50px;
+	}
+	.description h3{
+		font-size: 1.8em;
+		margin-bottom: 20px;
+		color: #252525;
+	}
+	.description p{
+		line-height: 1.67em;
+	}
+	.cardImg{
+		width: 100%;
+		height: auto;
+	}
+	h4{	
+		margin-top: 5px;
+		margin-bottom: 10px;
+		color: #252525;
+	}
+	.snip h3{
+		font-size: 2em;
+	}
+	.snip #emphasis{
+		color: #ED994C;
+	}
+	.snip p{
+		margin: 0;
+		line-height: 1.67em;
+	}
+	#objectivesCtn{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 20px;
+		column-gap: 10px;
+	}
+	.numberIcons{
+		width: 80px;
+		height: auto;
+		margin-bottom: 10px;
+	}
+	.objectivesItem h4{
+		color: #2D9CDB;
+		margin-bottom: 10px;
+	}
+	.infoCard3{
+		grid-column: 3/11;
+		display: grid;
+		grid-template-columns: auto;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		color: #252525;
+		margin: 40px auto;
+	}
+	#imgGallery{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-gap: 10px;
+		margin: 20px 10px;
+	}
+	.theseImgs{
+		border-radius: 20px;
+		background-color: #e5e5e5;
+		padding: 0;
+		width: 100%;
+		height: auto;
+	}
+	.theseImgs:first-of-type{
+	    padding: 0;
+	}
+	.infoCard3 p{
+		color: rgba(0, 0, 0, 0.5);
+		padding: 10px;
+	}
+	.infoCard3 h2{
+		margin: 0;
+	}
+</style>
