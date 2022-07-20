@@ -36,38 +36,42 @@ import Button from '../components/Button.astro';
                     <p class="deets">6000-1 Chitemene Rd <br />Northmead, Lusaka.</p>
                 </div>
             </div>
-            <div>
+            <div id="inLaw">
                 <div class="input_field">
                     <div class="same">
                         <h4 class="label">First Name</h4>
-                        <input type="text" label="First Name" placeholder="Enter your first name" class="input_box"/>
+                        <input type="text" label="First Name" placeholder="Enter your first name" class="input_box">
                     </div>
                     <div class="same">
                         <h4 class="label">Last Name</h4>
-                        <input type="text" label="Last Name" placeholder="Enter your last name" class="input_box"/>
+                        <input type="text" label="Last Name" placeholder="Enter your last name" class="input_box">
                     </div>
                     <div class="same">
                         <h4 class="label">Mail</h4>
-                        <input type="text" label="Mail" placeholder="Enter your email" class="input_box"/>
+                        <input type="text" label="Mail" placeholder="Enter your email" class="input_box">
                     </div>
                     <div class="same">
                         <h4 class="label">Phone</h4>
-                        <input type="text" label="Phone" placeholder="Enter your phone" class="input_box"/>
+                        <input type="text" label="Phone" placeholder="Enter your phone" class="input_box">
                     </div>
                 </div>
-                <div>
+                <div id="textAreaCtn">
                     <div id="msg_ctn">
                         <h4 class="label">Message</h4>
                         <textarea type="text" label="Phone" placeholder="Write your message here..." id="msg_box"></textarea>
                     </div>
+                    <Button btnLabel="Send Message" className="btnBlue" attr="abs"/>
                 </div>
-                <Button btnLabel="Send Message" className="btnBlue"/>
+               
             </div>
         </div>
     </div>
 </BaseBluprint>
 
 <style>
+    *{
+        box-sizing: border-box;
+    }
     .duce h2{
         max-width: 34vw;
         font-size: 1.6em;
@@ -76,7 +80,7 @@ import Button from '../components/Button.astro';
         grid-column: 3/11;
         display: grid;
         grid-template-columns: auto;
-        margin: 50px 0;
+        margin-bottom: 75px;
         justify-content: center;
         text-align: center;
     }
@@ -89,17 +93,19 @@ import Button from '../components/Button.astro';
     }
     #contact_plate{
         display: grid;
-        grid-template-columns: 39.3% 59.6%;
+        grid-template-columns: 39% 59%;
         grid-auto-rows: auto auto auto;
-        gap: 15px;
+        justify-content: space-between;
+        gap: 2%;
     }
     #blue_ctn{
         font-size: .9em;
         padding: 40px 50px;
         text-align: left;
         color: #fff; 
-        /*background-image: url("../icons/bg_contact.svg");
-        background-repeat: no-repeat;*/
+        background-image: url("../icons/bg_contact.svg");
+        background-repeat: no-repeat;
+        background-position: bottom right;
         border-radius: 20px;
         background-color: #2D9CDB;
     }
@@ -109,11 +115,12 @@ import Button from '../components/Button.astro';
     .man{
         display: flex;
         gap: 0 10px;
+        margin-bottom: 10px;
     }
     #fiwMi{
         color: rgba(255, 255, 255, 0.6);
         padding: 0;
-        margin: 7px 0 20px 0;
+        margin: 0px 0 20px 0;
     }
     #blue_ctn h3{
         margin-top: 0;
@@ -124,18 +131,22 @@ import Button from '../components/Button.astro';
         border: 1px solid #A0A4A8;
         border-radius: 8px;
         display: block;
-        width: 80%;
+        width: 100%;
     }
     .input_field{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 49% 49%;
         height: auto;
-        gap: 15px;
+        justify-content: space-between;
+        gap: 2%;
     }
     .input_field h4, #msg_ctn h4{
         color: #252525;
         padding: 0;
         margin: 7px;
+    }
+    ::placeholder,:-ms-input-placeholder,::-ms-input-placeholder{
+        color: rgba(202, 204, 207, 1);
     }
     .same{
         text-align: left;
@@ -145,20 +156,44 @@ import Button from '../components/Button.astro';
         justify-items: start;
     }
     .label{
-        display: inline-block;
+        display: block;
+        color: rgba(0, 0, 0, 0.5);
     }
     #msg_box{
         width: 100%;
         padding: 8px 12px;
         border-radius: 8px;
         border: 1px solid #A0A4A8;
-        height: 300px;
+        min-height: 300px;
     }
     #msg_ctn{
+        margin-top: 10px;
         text-align: left;
         width: 100%;
     }
     #formFill{
+        color: rgba(0, 0, 0, 0.5);
         margin-bottom: 40px;
+    }
+    ::placeholder{
+        color: rgba(202, 204, 207, 1);
+    }
+    ::-moz-placeholder{
+        color: rgba(202, 204, 207, 1);
+    }
+    ::-ms-input-placeholder{
+        color: rgba(202, 204, 207, 1);
+    }
+    :-ms-input-placeholder{
+        color: rgba(202, 204, 207, 1);
+    }
+    #inLaw{
+        width: 100%;
+        height: auto;
+    }
+    #textAreaCtn{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: start;
     }
 </style>

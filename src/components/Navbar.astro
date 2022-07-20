@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon';
 <div class="cont">
     <div class="nav_wrapper">
         <div>
-            <Icon name='mumuniLogo' width={125} id="mainLogo" />
+            <a href="index.html"><Icon name='mumuniLogo' width={125} id="mainLogo" /></a>
         </div>
         <nav>
             <ul>
@@ -33,6 +33,7 @@ import { Icon } from 'astro-icon';
         left: 0;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        font-size: .9em;
     }
     .nav_wrapper{
         grid-column: 3/11;

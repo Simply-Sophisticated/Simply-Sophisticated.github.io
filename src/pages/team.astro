@@ -12,7 +12,7 @@ import Button from '../components/Button.astro';
 		</div>
     </Headman2>
 
-    <Snippet>
+    <Snippet idees="marge">
         <div class="snip" slot="snip1" id="innerSnip">
 			<h3>We’re sustainable energy project developers</h3>
 		</div>
@@ -87,6 +87,9 @@ import Button from '../components/Button.astro';
 </BaseBluprint>
 
 <style>
+    *{
+        box-sizing: border-box;
+    }
     .duce h2{
         max-width: 34vw;
         font-size: 1.6em;
@@ -99,7 +102,9 @@ import Button from '../components/Button.astro';
 		line-height: 1.67em;
 	}
     #innerSnip{
-        padding-right: 30px;
+        width: auto;
+        margin-right: 50px;
+        padding-right: 20px;
     }
     .teamsheet{
         grid-column: 3/11;
@@ -107,7 +112,7 @@ import Button from '../components/Button.astro';
         grid-template-columns: auto;
         justify-content: center;
         text-align: center;
-        padding: 50px 0;
+        margin-bottom: 75px;
     }
     .teamsheet h3{
         color: #252525;
@@ -147,7 +152,7 @@ import Button from '../components/Button.astro';
 		justify-content: center;
 		text-align: center;
 		color: #252525;
-		margin: 40px auto;
+		margin: 0 auto 75px auto;
 	}
 	#imgGallery{
 		display: grid;

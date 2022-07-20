@@ -1,7 +1,7 @@
 ---
-
+const {idees=""} = Astro.props;
 ---
-<div class="snippet">
+<div class="snippet" id={idees}>
     <div>
         <slot name="snip1" />
     </div>
@@ -17,10 +17,11 @@
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: auto;
 		background-color: rgba(196, 196, 196, 0.15);
-		padding: 40px 10px;
+		padding: 15px 10px;
 		color: #252525;
 		align-items: center;
         justify-content: space-between;
+		margin-bottom: 75px;
 	}
 	.snippet div:first-child{
 		grid-column: 3/7;
@@ -34,5 +35,8 @@
 		color: rgba(0, 0, 0, 0.5);
 		height: auto;
         padding: 20px 0;
+	}
+	#marge{
+		margin-top: -75px;
 	}
 </style>

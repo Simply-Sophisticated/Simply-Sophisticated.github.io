@@ -7,5 +7,6 @@ export default defineConfig({
           external: ["svgo"],
         },
       },
-    site:'https://Simply-Sophisticated.github.io'
+    site:'https://Simply-Sophisticated.github.io',
+    //base: '/Simply-Sophisticated.github.io'
 });

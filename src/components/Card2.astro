@@ -1,7 +1,7 @@
 ---
-
+const {idees=""} = Astro.props;
 ---
-<div class="card" id="boulder">
+<div class="card" id={idees}>
     <div class="c1">
         <slot name="desc"/>
     </div>
@@ -14,16 +14,19 @@
     .card{
         grid-column: 3/11;
         display: grid;
-        grid-template-columns: 45% 55%;
-        padding: 100px 0;
-        gap: 70px;
+        grid-template-columns: 44% 54%;
+        margin-bottom: 75px;
+        gap: 2%;
         align-items: center;
         color: rgba(0, 0, 0, 0.5);
     }
     .c2{
         padding: 20px;
     }
+    .c1{
+    }
     #boulder{
 		border-top: 4px solid #c4c4c4;
+        padding-top: 75px;
 	}
 </style>
