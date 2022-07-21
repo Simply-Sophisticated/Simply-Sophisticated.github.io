@@ -24,11 +24,11 @@ import Button from '../components/Button.astro';
 		<h2>See Our Current Projects</h2>
 		<p>Chililabombwe 100 MW Solar Power Project</p>
 		<div id="imgGallery">
-			<img src="gal1.png" class="theseImgs" />
-			<img src="gal2.png" class="theseImgs" />
-			<img src="gal3.png" class="theseImgs" />
+			<img src="../gal1.png" class="theseImgs" />
+			<img src="../gal2.png" class="theseImgs" />
+			<img src="../gal3.png" class="theseImgs" />
 		</div>
-		<Button className="btnBlue" btnLabel="Go to Current Project" />
+		<Button className="btnBlue" btnLabel="Go to Current Project" onclickLink="location.href='/project'"/>
 	</div>
     </div>
 </BaseBluprint>

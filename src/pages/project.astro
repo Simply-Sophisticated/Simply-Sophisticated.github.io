@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar.astro";
 import Headman2 from "../components/Headman2.astro";
 import Card from "../components/Card.astro";
 import Card2 from "../components/Card2.astro";
-import {Icon} from 'astro-icon';
 ---
 <BaseBluprint title="Project">
     <Navbar />
@@ -47,7 +46,7 @@ import {Icon} from 'astro-icon';
             </div>
 		</div>
 		<div slot="img" class="img_space">
-			<img src="img_wahda.svg" class="cardImg"/>
+			<img src="../img_wahda.svg" class="cardImg"/>
 		</div>
     </Card2>
 
@@ -57,7 +56,7 @@ import {Icon} from 'astro-icon';
         </p>
     </div>
 
-    <img src="img_chart.svg" class="cardImg" id="chart"/>
+    <img src="../img_chart.svg" class="cardImg" id="chart"/>
 
     <Card>
 		<div class="description" slot="desc" id="disc2">
@@ -66,7 +65,7 @@ import {Icon} from 'astro-icon';
 </p>
 		</div>
 		<div class="img_space" slot="img">
-			<img src="img_plant.svg" class="cardImg" />
+			<img src="../img_plant.svg" class="cardImg" />
 		</div>
 	</Card>
 </BaseBluprint>
