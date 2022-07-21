@@ -1,16 +1,19 @@
-@font-face {
-    font-family: "main";
-    src: url("../Roboto-Regular.ttf");
-}
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-#mainLogo {
-    display: block;
-}
-body {
-    font-family: "main";
+  }
+  @font-face {
+    font-family: "default_font";
+    src: url("../Roboto-Regular.ttf");
+  }
+  body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    min-height: 100vh;
+    font-family: "default_font";
     color: #E5E5E5;
-}
+    margin: 0;
+    padding: 0;
+  }
