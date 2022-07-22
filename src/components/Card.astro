@@ -1,8 +1,8 @@
 ---
-
+const {c1prop=""} = Astro.props;
 ---
 <div class="card">
-    <div class="c1">
+    <div class="c1" id={c1prop}>
         <slot name="img"/>
     </div>
     <div class="c2">
@@ -26,5 +26,14 @@
     }
     .c1{
         min-height: 100%;
+        padding: 5px;
+        overflow: hidden;
+    }
+    #abtUs{
+        background-image: url("../solarPanels.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
     }
 </style>
