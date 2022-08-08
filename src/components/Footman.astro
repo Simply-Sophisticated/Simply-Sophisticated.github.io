@@ -14,7 +14,7 @@ import {Icon} from 'astro-icon';
             <h3>Useful Links</h3>
             <ul>
                 <a href="/index.html"><li> Home</li></a>
-                <a href="/about"><li> About Us</li></a>
+                <a href="/index.html#Abourus"><li> About Us</li></a>
                 <a href="/team"><li> Team</li></a>
                 <a href="/project"><li> Project</li></a>
                 <a href="/contact"><li> Contact Us</li></a>
@@ -25,14 +25,14 @@ import {Icon} from 'astro-icon';
             <h3>Services</h3>
             <ul>
                 <a href="/index.html"><li> Home</li></a>
-                <a href="/about"><li> About Us</li></a>
+                <a href="/index.html#Abourus"><li> About Us</li></a>
                 <a href="/team"><li> Team</li></a>
                 <a href="/project"><li> Project</li></a>
                 <a href="/contact"><li> Contact Us</li></a>
             </ul>
         </div>
 
-        <div>
+        <div id="iconLinkz">
             <h3>Follow Us</h3>
             <ul class="quickLinks">
                 <a href="#"><li><Icon name='icon_ig' width={30}/></li></a>
@@ -55,7 +55,7 @@ import {Icon} from 'astro-icon';
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         background-color: #0B1737;
-        font-size: .9em;
+        font-size: .8em;
     }
     .footerCtn{
         grid-column: 3/11;
@@ -73,6 +73,10 @@ import {Icon} from 'astro-icon';
         list-style-type: none;
         margin: 0 0 0 10px;
         padding: 0;
+    }
+    .footerCtn #iconLinkz ul{
+        margin: 0 0 0 0px;
+        padding: 0px;
     }
     .footerCtn a{
         text-decoration: none;

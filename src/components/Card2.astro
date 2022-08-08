@@ -11,6 +11,9 @@ const {idees=""} = Astro.props;
 </div>
 
 <style>
+    *{
+        box-sizing: border-box;
+    }
     .card{
         grid-column: 3/11;
         display: grid;
@@ -22,8 +25,11 @@ const {idees=""} = Astro.props;
     }
     .c2{
         padding: 20px;
+        max-height: 100%;
     }
     .c1{
+        width: 100%;
+        height: auto;
     }
     #boulder{
 		border-top: 4px solid #c4c4c4;
