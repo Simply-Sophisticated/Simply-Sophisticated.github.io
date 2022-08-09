@@ -13,22 +13,22 @@ import {Icon} from 'astro-icon';
         <div>
             <h3>Useful Links</h3>
             <ul>
-                <a href="/index.html"><li> Home</li></a>
-                <a href="/index.html#Abourus"><li> About Us</li></a>
-                <a href="/team"><li> Team</li></a>
-                <a href="/project"><li> Project</li></a>
-                <a href="/contact"><li> Contact Us</li></a>
+                <a href="/index.html" class="arrow"><li> Home</li></a>
+                <a href="/index.html#Abourus" class="arrow"><li> About Us</li></a>
+                <a href="/team" class="arrow"><li> Team</li></a>
+                <a href="/project" class="arrow"><li> Project</li></a>
+                <a href="/contact" class="arrow"><li> Contact Us</li></a>
             </ul>
         </div>
 
         <div>
             <h3>Services</h3>
             <ul>
-                <a href="/index.html"><li> Home</li></a>
-                <a href="/index.html#Abourus"><li> About Us</li></a>
-                <a href="/team"><li> Team</li></a>
-                <a href="/project"><li> Project</li></a>
-                <a href="/contact"><li> Contact Us</li></a>
+                <a href="/index.html" class="arrow"><li> Home</li></a>
+                <a href="/index.html#Abourus" class="arrow"><li> About Us</li></a>
+                <a href="/team" class="arrow"><li> Team</li></a>
+                <a href="/project" class="arrow"><li> Project</li></a>
+                <a href="/contact" class="arrow"><li> Contact Us</li></a>
             </ul>
         </div>
 
@@ -72,17 +72,18 @@ import {Icon} from 'astro-icon';
     }
     .footerCtn ul{
         list-style-type: none;
-        margin: 0 0 0 10px;
+        margin: 0;
         padding: 0;
     }
     .footerCtn #iconLinkz ul{
         margin: 0 0 0 0px;
         padding: 0px;
     }
-    .footerCtn a{
+    .footerCtn .arrow{
         text-decoration: none;
         color: #eee;
         list-style-image: url('list_arrow.svg');
+        list-style-position: inside;
     }
     .footerCtn h2, .footerCtn h3,.footerCtn p{
         margin-bottom: 20px;
