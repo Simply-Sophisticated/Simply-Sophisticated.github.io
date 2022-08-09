@@ -1,7 +1,8 @@
 ---
 const {c1prop=""} = Astro.props;
+const {idea=""} = Astro.props;
 ---
-<div class="card">
+<div class="card" id={idea}>
     <div class="c1" id={c1prop}>
         <slot name="img"/>
     </div>
@@ -19,7 +20,7 @@ const {c1prop=""} = Astro.props;
         display: grid;
         grid-template-columns: 44% 54%;
         grid-template-rows: 100%;
-        margin-bottom: 75px;
+        padding-top: 75px;
         gap: 2%;
         align-items: center;
         color: rgba(0, 0, 0, 0.5);

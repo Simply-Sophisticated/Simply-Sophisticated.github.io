@@ -3,6 +3,7 @@ import BaseBluprint from '../layouts/BaseBluprint.astro';
 import Headman2 from '../components/Headman2.astro';
 import Snippet from '../components/Snippet.astro';
 import Button from '../components/Button.astro';
+import CurrentProjects from '../components/CurrentProjects.astro';
 ---
 <BaseBluprint title="Team">
     <Headman2>
@@ -73,16 +74,7 @@ import Button from '../components/Button.astro';
 		</div>
     </Snippet>
 
-    <div class="infoCard3">
-		<h2>See Our Current Projects</h2>
-		<p>Chililabombwe 100 MW Solar Power Project</p>
-		<div id="imgGallery">
-			<img src="../gal1.png" class="theseImgs" />
-			<img src="../gal2.png" class="theseImgs" />
-			<img src="../gal3.png" class="theseImgs" />
-		</div>
-		<Button className="btnBlue" btnLabel="Go to Current Project" onclickLink="location.href='/project'"/>
-	</div>
+    <CurrentProjects />
 </BaseBluprint>
 
 <style>
@@ -111,7 +103,7 @@ import Button from '../components/Button.astro';
         grid-template-columns: auto;
         justify-content: center;
         text-align: center;
-        margin-bottom: 75px;
+        margin-top: 75px;
     }
     .teamsheet h3{
         color: #252525;
@@ -143,40 +135,6 @@ import Button from '../components/Button.astro';
     #kontact{
         margin-bottom: 20px;
     }
-    .infoCard3{
-		grid-column: 3/11;
-		display: grid;
-		grid-template-columns: auto;
-		width: 100%;
-		justify-content: center;
-		text-align: center;
-		color: #252525;
-		margin: 0 auto 75px auto;
-	}
-	#imgGallery{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: auto;
-		grid-gap: 10px;
-		margin: 20px 10px;
-	}
-	.theseImgs{
-		border-radius: 20px;
-		background-color: #e5e5e5;
-		padding: 0;
-		width: 100%;
-		height: auto;
-	}
-	.theseImgs:first-of-type{
-	    padding: 0;
-	}
-	.infoCard3 p{
-		color: rgba(0, 0, 0, 0.5);
-		padding: 10px;
-	}
-	.infoCard3 h2{
-		margin: 0;
-	}
     .cardImg{
         width: 100%;
         height: auto;

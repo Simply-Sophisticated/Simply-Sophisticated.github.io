@@ -1,7 +1,8 @@
 ---
 const {idees=""} = Astro.props;
+const {idea=""} = Astro.props;
 ---
-<div class="card" id={idees}>
+<div class="card" class={idees} id={idea}>
     <div class="c1">
         <slot name="desc"/>
     </div>
@@ -18,9 +19,9 @@ const {idees=""} = Astro.props;
         grid-column: 3/11;
         display: grid;
         grid-template-columns: 44% 54%;
-        margin-bottom: 75px;
+        padding-top: 75px;
         gap: 2%;
-        align-items: center;
+        align-items: start;
         color: rgba(0, 0, 0, 0.5);
     }
     .c2{
@@ -28,11 +29,13 @@ const {idees=""} = Astro.props;
         max-height: 100%;
     }
     .c1{
+        padding: 20px;
         width: 100%;
         height: auto;
+        font-size: 1rem;
     }
-    #boulder{
+    .boulder{
 		border-top: 4px solid #c4c4c4;
-        padding-top: 75px;
+        margin-top: 75px;
 	}
 </style>
