@@ -5,7 +5,11 @@
 }
 @font-face{
     font-family: "default_font";
-    src: url("../Roboto-Regular.ttf");
+    src: url("../Inter-Regular.ttf");
+}
+@font-face{
+    font-family: "default_font_bold";
+    src: url("../Inter-SemiBold.ttf");
 }
 body:global{
     display: grid;
@@ -16,4 +20,7 @@ body:global{
     color: #E5E5E5;
     margin: 0;
     padding: 0;
+}
+h2,h3,h4{
+    font-family: "default_font_bold";
 }
