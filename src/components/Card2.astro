@@ -1,12 +1,13 @@
 ---
 const {idees=""} = Astro.props;
 const {idea=""} = Astro.props;
+const {addatt=""} = Astro.props;
 ---
 <div class="card" class={idees} id={idea}>
     <div class="c1">
         <slot name="desc"/>
     </div>
-    <div class="c2">
+    <div class="c2" id={addatt}>
         <slot name="img"/>
     </div>  
 </div>
@@ -18,7 +19,7 @@ const {idea=""} = Astro.props;
     .card{
         grid-column: 3/11;
         display: grid;
-        grid-template-columns: 44% 54%;
+        grid-template-columns: 49% 49%;
         padding-top: 75px;
         gap: 2%;
         align-items: start;
@@ -26,6 +27,9 @@ const {idea=""} = Astro.props;
     }
     .c2{
         max-height: 100%;
+        min-height: 100%;
+        padding: 5px;
+        overflow: hidden;
     }
     .c1{
         width: 100%;
@@ -36,4 +40,11 @@ const {idea=""} = Astro.props;
 		border-top: 4px solid #c4c4c4;
         margin-top: 75px;
 	}
+    #illusiveImg{
+        background-image: url("../img_wahda.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+    }
 </style>

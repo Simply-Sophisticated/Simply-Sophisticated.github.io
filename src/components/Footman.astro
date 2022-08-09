@@ -4,7 +4,7 @@ import {Icon} from 'astro-icon';
 <footer>
     <div class="footerCtn">
         <div>
-            <h2>Mumuni Energy</h2>
+            <h2><a href="/index.html">Mumuni Energy</a></h2>
             <p>6000-B Chitemene Rd,<br /> Northmead, Lusaka.</p>
             <p><em>Phone: </em> +999 999 9999</p>
             <p><em>Email: </em> info@example.com</p>
@@ -81,6 +81,10 @@ import {Icon} from 'astro-icon';
         color: #eee;
         list-style-image: url('../list_arrow.svg');
         list-style-position: inside;
+    }
+    footer h2>a{
+        text-decoration: none;
+        color: #eee;
     }
     .footerCtn h2, .footerCtn h3,.footerCtn p{
         margin-bottom: 20px;
